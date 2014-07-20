@@ -1,0 +1,9 @@
+language: php
+php:
+  - 5.3
+before_script:
+  - gem install mailcatcher
+  - phpenv config-add travis.php.ini
+  - mailcatcher
+script:
+  - phpunit SampleTest.php
